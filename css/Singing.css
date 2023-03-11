@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap");
+
+body {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffedd8, #f3d5b5, #e7bc91, #edbb90);
+}
+
+::-moz-selection {
+  /* Firefox */
+  color: #fefae0;
+  background: #d4a373;
+}
+
+::selection {
+  color: #fefae0;
+  background: #d4a373;
+}
+
+/* nav bar */
+nav {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #d4a373ca;
+  position: -webkit-sticky; /*safari*/
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#navbar {
+  display: grid;
+  grid-template-columns: 34% 8% 8% 8% 8%;/*最上面 nav 那幾個選項的比例大小*/
+}
+
+#logo {
+  position: absolute;
+  padding: 0;
+  left: 1em;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.a_img img {
+  border-radius: 50%;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 15px;
+  color: #fefae0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav li a:hover {
+  color: #9e2a2b;
+}
+
+
+
+
+
+
+/*section*/
+
+section {
+  width: 80%;
+  margin: auto;
+}
+
+#title {
+  margin: 20px 30px 20px;
+  font-size: 40px;
+  color: #96402b;
+}
+
+#sec {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.gal_box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  background: #540b0e;
+  margin: 12px 0px 0px;
+  z-index: 10;
+  box-shadow: 2px 2px 8px #540b0db9;
+  border-radius: 10px; /*box 圓角*/
+  overflow: hidden;
+}
+
+.gal_box:hover {
+  cursor: pointer;
+}
+
+.gal_imgbox {
+  width: 100%;
+  overflow: hidden;
+}
+.gal_box .gal_imgbox video {
+  padding-top: 20px;
+  width: 90%;
+}
+
+
+.gal_box h3 {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  color: #faedcd;
+}
+
+/*footer*/
+footer {
+  clear: both;
+  padding: 20px 0px;
+  text-align: center;
+  color: #9e2a2b;
+}

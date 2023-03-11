@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap");
+
+body {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffedd8, #f3d5b5, #f5cfa9);
+}
+
+::-moz-selection {
+  /* Firefox */
+  color: #fefae0;
+  background: #d4a373;
+}
+
+::selection {
+  color: #fefae0;
+  background: #d4a373;
+}
+
+/* nav bar */
+nav {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #d4a373ca;
+  position: -webkit-sticky; /*safari*/
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#navbar {
+  display: grid;
+  grid-template-columns: 34% 8% 8% 8% 8%;/*最上面 nav 那幾個選項的比例大小*/
+}
+
+#logo {
+  position: absolute;
+  padding: 0;
+  left: 1em;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.a_img img {
+  border-radius: 50%;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 15px;
+  color: #fefae0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav li a:hover {
+  color: #9e2a2b;
+}
+
+/* section */
+section {
+  width: 80%;
+  margin: auto;
+}
+
+.title {
+  margin: 20px 30px 20px;
+  font-size: 34px;
+  color: #96402b;
+}
+
+iframe {
+  border-radius: 20px; /*box 圓角*/
+}
+
+.box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 500px;
+  background: #faedcd00; /*transparent*/
+  z-index: 10;
+  overflow: hidden;
+  margin: 10px 15px 10px;
+}
+
+
+/*頭貼部分處理*/
+.head{
+	display: inline-block;
+	padding: 0px 20px 20px;
+}
+.head img{
+	float: left;
+	width: 40px;
+	height: 50px;
+	border-radius: 50%; /*頭像才會變成圓形*/
+}
+.head span{
+	float: left;
+	font-size: 13px;
+	color:  rgba(42,157,143,1);
+	line-height: 50px; /*因為上面的圖片式 40 px 所以才設定40，小部分要設定的時候再用這個取巧的方法，下一次的範例會教置中的正統作法*/
+	margin-left: 20px;
+}
+
+/* .head {
+  display: flex;
+  padding: 2px 0px 10px 5px;
+  text-align: unset;
+  font-size: 36px;
+} */
+
+.fa {
+  color: #9e2a2b;
+}
+
+/* .head span {
+  float: left;
+  font-size: 20px;
+  color: #540b0e;
+  line-height: 40px;
+  margin-left: 10px;
+} */
+
+.med_box {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 10px 15px 20px;
+}
+
+.medium1 img {
+  border-radius: 10px;
+}
+
+#gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+#text {
+  font-size: 30px;
+  color: #9e2a2b;
+  margin: 20px 30px 20px;
+}
+
+.gal_box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fefae0;
+  margin: 12px 0px 0px;
+  z-index: 10;
+  box-shadow: 2px 2px 8px #d4a373b6;
+  border-radius: 10px; /*box 圓角*/
+  overflow: hidden;
+}
+
+/* 滑鼠變成點選的手 */
+/* .gal_box:hover {
+  cursor: pointer;
+} */
+
+.gal_imgbox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gal_box .gal_imgbox img {
+  float: left;
+  width: 100%;
+
+  transform: scale(1, 1); /*standard syntax*/
+  -ms-transform: scale(1, 1); /*IE 9*/
+  -webkit-transform: scale(1, 1); /*safari*/
+
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out; /*safari*/
+}
+
+.gal_box:hover .gal_imgbox img {
+  transform: scale(1.2, 1.2); /*standard syntax*/
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2); /*safari*/
+}
+
+.gal_box h3 {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  color: #9e2a2b;
+}
+
+.gal_box p {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  color: #540b0e;
+}
+
+/*footer*/
+footer {
+  clear: both;
+  padding: 20px 0px;
+  text-align: center;
+  color: #9e2a2b;
+}
