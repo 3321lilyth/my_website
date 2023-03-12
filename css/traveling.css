@@ -47,8 +47,8 @@ nav li {
 #navbar {
   display: grid;
   /*最上面 nav 那幾個選項的比例大小*/
-  /* grid-template-columns: 34% 8% 8% 8% 8%; */
-  grid-template-columns: 38% 8% 8% 8%;
+  grid-template-columns: 34% 8% 8% 8% 8%;
+  /* grid-template-columns: 38% 8% 8% 8%; */
 }
 
 #logo {

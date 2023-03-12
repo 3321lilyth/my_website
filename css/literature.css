@@ -1,0 +1,206 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Merienda", cursive;
+}
+html, body{
+  height: 100%;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Firefox */
+  color: #fefae0;
+  background: #d4a373;
+}
+::selection {
+  color: #fefae0;
+  background: #d4a373;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++top-nav bar++++++++++++++++++++++++++++++++++ */
+#top-nav {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #d4a373ca;
+  position: -webkit-sticky; /*safari*/
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+#top-nav ul {
+  margin: 0;
+  padding: 0;
+}
+#top-nav li {
+  display: inline-block;
+  position: relative;
+}
+#navbar {
+  display: grid;
+  /*最上面 nav 那幾個選項的比例大小*/
+  grid-template-columns: 34% 8% 8% 8% 8%;
+  /* grid-template-columns: 38% 8% 8% 8%; */
+}
+#logo {
+  position: absolute;
+  padding: 0;
+  left: 1em;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.a_img img {
+  border-radius: 50%;
+}
+#top-nav li a {
+  display: inline-block;
+  padding: 15px;
+  color: #fefae0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+#top-nav li a:hover {
+  color: #9e2a2b;
+}
+
+
+#wrapper{
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  /* display: flex; for 文字可以出現在選單的右邊而不是下面 */
+  margin-bottom: -50px; /*隨footer高度需做調整*/
+  background: linear-gradient(135deg, #fbeee0, #f3d5b5, #e7bc91, #dbaa7f);
+}
+
+/*+++++++++++++++++++++++++++++++++側邊的 nav++++++++++++++++++++++++++++++*/
+#sideMenu {
+  width: 270px;
+  height: 500px;
+  padding: 50px 0;
+  box-sizing: border-box;
+  /* background-color:#fefae0; */
+  background-image: linear-gradient(0deg, #fefae0, #f6edb4);
+  box-shadow: 5px 0px 10px hsla(240, 40%, 15%, 0.6);
+  position: fixed;
+}
+#side-nav a{
+  display: block;
+  padding: 10px; 
+  color: #9e2a2b;
+  text-decoration: none;
+  position: relative;
+}
+#side-nav a + a::before{ /*為了每個 nav 中間的線條*/
+  content: '';
+  position: absolute;
+  border-top: 1px solid #9e2a2b;
+  left: 10px;
+  right: 10px;
+  top: 0;
+}
+#side-nav .fas{
+  margin-right: -1.1em;
+  transform: scale(0); /*一開始讓文字旁邊的圖案消失*/
+  transition: .3s;
+}
+#side-nav a:hover .fas{ /*滑鼠移上去才讓圖案顯示*/
+  margin-right:  0em;
+  transform: scale(1);
+}
+
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++ section +++++++++++++++++++++++++++++++++++++++++++++++*/
+section {
+  width: 80%;
+  margin: auto;
+  margin-left: 300px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+/*大標題*/
+#welcome {
+  padding: 2em;
+  font-size: 60px;
+  float: right;
+  color: #c8634a;
+  font-family: "Courgette", cursive;
+}
+#welcome p{
+  padding-top: 110px;
+  box-sizing: border-box;
+}
+section h1{
+  font-size: 50px;
+  color: #c8634a;
+  font-family: "Courgette", cursive;
+}
+section h3{
+  font-size: 35px;
+  color: #c8634a;
+  font-family: "Courgette", cursive;
+}
+.line-1 {
+  position: relative;
+  top: 20%;
+  width: 11em;
+  margin: 0px 10px -150px 0px;
+  border-right: 1.5px solid #f7b167b5;
+  font-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+/* Animation */
+/* Adapt from: https://codepen.io/blackfrom80s/pen/ogoxLw */
+.anim-typewriter {
+  animation: typewriter 3s steps(44) 0.5s 1 normal both,
+    blinkTextCursor 500ms steps(44) 8 normal both;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #f7b167b5;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+section p{
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+
+/*footer*/
+footer {
+  /* height: 5%; */
+  /* clear: both; */
+  padding: 20px 0px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #9e2a2b;
+}

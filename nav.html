@@ -1,0 +1,18 @@
+<ul>
+    <li><a href="literature0.html"><i class="fas fa-trophy"></i>文學首頁</a><li>
+    <li><a href="literature1.html"><i class="fas fa-sitemap"></i>短篇小說-假面</a><li>
+    <li><a href="literature2.html"><i class="fas fa-chalkboard"></i>淺析黑澤明之羅生門</a><li>
+    <li><a href="literature3.html"><i class="fas fa-book-reader"></i>蕭紅呼蘭河傳閱後分析</a><li>
+    <li><a href="literature4.html"><i class="fas fa-user-graduate"></i>改寫芥川龍之介作品-橘子</a><li>
+</ul>
+
+<!-- 
+    注意這串 js 要寫在這邊，而不是 index.html 引入的那一個，因為 index.html 裡面已經沒有 nav 裡面的內容了。
+    注意像這種每個頁面都是套用同一個程式碼的區塊，才會把 html 跟 js 都寫在一起。
+-->
+<script>
+    $(document).ready(function(){
+        var pn = $("body").data("pagenum");
+        $("li").eq(pn).addClass("ch_bg");  //eq 是遍歷，上面的 li 會依序是012，如果編號跟妳點的依樣是一樣的話就會變色
+    });
+</script>
